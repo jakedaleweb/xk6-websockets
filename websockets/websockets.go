@@ -194,7 +194,9 @@ func (w *webSocket) establishConnection() {
 	start := time.Now()
 	conn, httpResponse, connErr := wsd.DialContext(ctx, w.url.String(), header)
 	defer func() {
-		_ = httpResponse.Body.Close()
+		if httpResponse != nil && httpResponse.Body != nil {
+			_ = httpResponse.Body.Close()
+		}
 	}()
 	connectionEnd := time.Now()
 	connectionDuration := metrics.D(connectionEnd.Sub(start))
