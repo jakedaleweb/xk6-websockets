@@ -2,7 +2,7 @@
 package websockets
 
 import (
-	"github.com/grafana/xk6-websockets/websockets"
+	"github.com/jakedaleweb/xk6-websockets/websockets"
 	"go.k6.io/k6/js/modules"
 )
 

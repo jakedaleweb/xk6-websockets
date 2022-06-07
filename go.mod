@@ -1,4 +1,4 @@
-module github.com/grafana/xk6-websockets
+module github.com/jakedaleweb/xk6-websockets
 
 go 1.17
 
